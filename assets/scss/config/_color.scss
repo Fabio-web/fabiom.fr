@@ -1,0 +1,27 @@
+$color-primary: #3454D1;
+$color-secondary: #223996;
+$color-accent: #F8C83A;
+$color-success: #22C55E;
+$color-danger: #DD2D2D;
+$color-warning: #FFA24B;
+$color-info: #319CD4;
+
+$color-d-primary: darken($color-primary, 10%);
+$color-d-secondary: darken($color-secondary, 10%);
+$color-d-accent: darken($color-accent, 10%);
+$color-d-success: darken($color-success, 10%);
+$color-d-danger: darken($color-danger, 10%);
+$color-d-warning: darken($color-warning, 10%);
+$color-d-info: darken($color-info, 10%);
+
+$color-d-black: darken(#212121, 3%);
+$color-black: #212121;
+$color-d-grey: #3D3D3D;
+$color-grey: #AEAFB0;
+$color-smoke: #F3F3F3;
+$color-white: #FEFFFE;
+
+$color-text-black: $color-black;
+$color-text-white: $color-smoke;
+
+$color-slot1: #FFF;

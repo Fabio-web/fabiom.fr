@@ -1,0 +1,40 @@
+.tooltips {
+    position: relative;
+    width: fit-content;
+
+    .tooltips-content {
+        position: absolute;
+        background-color: $color-primary;
+        padding: 15px 25px;
+        border-radius: 3px;
+        z-index: -1;
+        max-width: 275px;
+        width: max-content;
+        margin: 25px auto 0;
+
+		left: 50%;
+		transform: translateX(-50%);
+
+        opacity: 0;
+        transition: opacity .3s;
+
+        &:before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background-color: $color-primary;
+            position: absolute;
+            transform: translateY(-22px) translateX(-50%) rotate(45deg);
+            left: 50%;
+        }
+    }
+
+    & .hover:hover ~ .tooltips-content {
+        z-index: 4;
+        opacity: 1;
+    }
+
+    .hover {
+        cursor: help;
+    }
+}

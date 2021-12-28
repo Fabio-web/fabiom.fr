@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $color-text-black;
+    font-weight: $weight-regular;
+    width: 100%;
+    overflow-x: hidden;
+    min-width: 100vw;
+    background: $color-smoke;
+    font-size: 15px;
+}
+
+::-webkit-scrollbar,
+.message-box-scroll::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+::-webkit-scrollbar-track,
+.message-box-scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 25px $color-d-black;
+}
+
+::-webkit-scrollbar-thumb,
+.message-box-scroll::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+    outline: 0;
+}
+
+::selection {
+    background: rgba($color-d-primary, 0.2); /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: rgba($color-d-primary, 0.2); /* Gecko Browsers */
+}
+
+a {
+    color: $color-primary;
+    cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+a,
+ol,
+ul,
+li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    line-height: 1.38em;
+}
+
+b,
+optgroup,
+strong {
+    font-weight: 700;
+}
+
+sup {
+    top: -0.5em;
+    vertical-align: baseline;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+
+input {
+    outline: none;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+pre {
+    margin: 25px 0;
+    color: $color-black;
+    background-color: $color-smoke;
+    border: 1px solid $color-d-grey;
+    padding: 25px 35px;
+}

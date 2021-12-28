@@ -1,0 +1,99 @@
+$primary: $color-primary;
+$primary-d: darken($color-primary, 10%);
+
+$secondary: $color-accent;
+$secondary-d: $color-d-accent;
+
+$important: $color-danger;
+$important-d: $color-d-danger;
+
+.btn {
+    display: flex;
+    flex-direction: row;
+
+    &.btn-right {
+        flex-direction: row-reverse;
+    }
+
+    &.btn-center {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    button {
+        background-color: $primary;
+        padding: 10px 35px;
+        border-radius: 3px;
+        color: $color-text-white;
+        border: 2px solid $primary;
+        font-size: $rem-18;
+        font-weight: $weight-bold;
+        box-shadow: none;
+        transition: .2s;
+        cursor: pointer;
+        outline: none;
+        word-break: break-word;
+
+        &:hover:enabled {
+            background-color: $primary-d;
+            border-color: $primary-d;
+        }
+    }
+
+    button:disabled {
+        cursor: not-allowed;
+        filter: grayscale(0.7);
+    }
+
+    &.btn-small {
+        button {
+            padding: 3px 15px;
+        }
+    }
+
+    &.btn-reverse {
+        button {
+            background-color: transparent!important;
+            color: $primary;
+            &:hover:enabled{color: $primary-d;}
+        }
+
+        &.btn-secondary {
+            button {
+                color: $secondary;
+                &:hover:enabled{color: $secondary-d;}
+            }
+        }
+    }
+
+    &.btn-secondary {
+        button {
+            background-color: $secondary;
+            border-color: $secondary;
+            color: $color-text-black;
+
+            &:hover:enabled {
+                background-color:$secondary-d;
+                border-color: $secondary-d;
+            }
+        }
+    }
+
+    &.btn-important {
+        button {
+            background-color: $important;
+            border-color: $important;
+
+            &:hover:enabled {
+                background-color:$important-d;
+                border-color: $important-d;
+            }
+        }
+    }
+}
+
+.light-mode {
+    button {
+        color: $color-text-black;
+    }
+}
