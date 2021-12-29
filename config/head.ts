@@ -22,7 +22,8 @@ const head: NuxtOptionsHead = {
     link: [
         { rel: "icon", type: "image/x-icon", href: "/icon.png" },
         { rel: "stylesheet", href: "/fontawesome/css/all.css" },
-        { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" },
+        { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" },
+        { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap" },
     ]
 }
 

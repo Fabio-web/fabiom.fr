@@ -1,0 +1,175 @@
+.home {
+	display: flex;
+
+	* {
+		transition: .2s all;
+	}
+
+	.sides {
+		display: flex;
+		flex-direction: column;
+		width: 30%;
+		min-width: 280px;
+		background-color: $color-black;
+
+		.side {
+			width: 100%;
+			padding-top: 100px;
+
+			&.photo {
+
+				.content {
+					img {
+						position: relative;
+						border: 10px solid $color-white;
+						width: 22vw;
+						max-width: 340px;
+						left: 10vw;
+
+						@media all and (max-width: $container-normal-max) {
+							width: 25vw;
+						}
+
+						@media all and (max-width: $container-normal-min) {
+							width: 30vw;
+						}
+					}
+				}
+			}
+
+			&.socials {
+				position: sticky;
+				top: 0;
+
+				padding-right: 100px;
+
+				.content {
+
+					display: flex;
+					flex-direction: column;
+					gap: 25px;
+					width: 100%;
+
+					height: 100vh;
+
+					a {
+						display: flex;
+						flex-direction: row-reverse;
+						gap: 25px;
+						font: {
+							size: $rem-26;
+							weight: $weight-bold;
+						};
+					}
+				}
+			}
+		}
+
+		@media all and (max-width: $container-mobile-max) {
+
+			min-width: 75px;
+
+			.side {
+				&.photo {
+					display: none;
+				}
+
+				&.socials {
+					padding-right: 0;
+
+					.content {
+						align-items: center;
+
+						a {
+							font-size: $rem-40;
+							span {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.presentation {
+		color: $color-text-black;
+		padding: 100px 100px;
+
+		.introducing {
+			padding-left: 10vw;
+			display: flex;
+			flex-direction: column;
+			gap: 75px;
+
+			.head {
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+
+				h1, h2 {margin: 0;}
+
+				h1 {
+					font: {
+						family: $font-family-secondary;
+						size: 100px;
+					};
+
+					img {
+						height: 100px;
+					}
+				}
+
+				h2 {
+					font: {
+						size: $rem-40;
+						weight: $weight-bold;
+					};
+				}
+			}
+
+			p {
+				font-size: $rem-40;
+			}
+		}
+
+		@media all and (max-width: $container-mobile-max) {
+			padding: 100px 25px;
+			.introducing {
+				padding-left: 0;
+
+				.head {
+					display: flex;
+					flex-direction: column;
+					gap: 0;
+
+					h1, h2 {margin: 0;}
+
+					h1 {
+						font: {
+							family: $font-family-secondary;
+							size: 75px;
+						};
+
+						img {
+							height: 100px;
+						}
+					}
+
+					h2 {
+						font: {
+							size: $rem-32;
+							weight: $weight-bold;
+						};
+					}
+				}
+
+				p {
+					font-size: $rem-32;
+				}
+			}
+		}
+
+
+	}
+}

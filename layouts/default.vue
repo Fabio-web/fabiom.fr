@@ -1,5 +1,5 @@
 <template>
-	<div class="container">
+	<div>
 		<Toast bottom/>
 		<Nuxt id="content"/>
 	</div>

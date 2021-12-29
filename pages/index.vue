@@ -1,6 +1,32 @@
 <template>
 	<div class="home">
-		<Title :size="48">Hello World !</Title>
+		<div class="sides">
+			<div class="side photo">
+				<div class="content">
+					<img src="~/assets/img/profile.png" alt="fabiom profile photo">
+				</div>
+			</div>
+			<div class="side socials">
+				<div class="content">
+					<a target="_blank" href="https://github.com/Fabio-web" ref="noopener" class="row"><i class="fab fa-github"></i> <span>Github</span></a>
+					<a target="_blank" href="https://www.linkedin.com/in/fabiomaccotta/" ref="noopener" class="row"><i class="fab fa-linkedin"></i> <span>Linkedin</span></a>
+					<a href="mailto:contact@fabiom.fr" ref="noopener" class="row"><i class="far fa-at"></i> <span>E-Mail</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="presentation">
+			<div class="introducing">
+				<div class="head">
+					<h1>Hi, <br>I’m Fabio <img src="https://e.unicode-table.com/orig/32/e70ddf12ec8dc727eb8c1e6f4a31dc.png" alt="signe de la main"></h1>
+					<h2>Based in Toulouse, France <i class="fas fa-map-marker-alt"></i><br>i’m web & application developer</h2>
+				</div>
+				<p>
+					Passionate about new technologies, more than 5 years ago, I decided to embark on computer programation as a self-taught.
+					<br><br>
+					For all my projects and missions, I invest myself to have a stable, optimized and scalable project. I know how to work as a team.				</p>
+			</div>
+
+		</div>
 	</div>
 </template>
 
