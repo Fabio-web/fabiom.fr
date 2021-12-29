@@ -7,10 +7,8 @@
 				</div>
 			</div>
 			<div class="side socials">
-				<div class="content">
-					<a target="_blank" href="https://github.com/Fabio-web" ref="noopener" class="row"><i class="fab fa-github"></i> <span>Github</span></a>
-					<a target="_blank" href="https://www.linkedin.com/in/fabiomaccotta/" ref="noopener" class="row"><i class="fab fa-linkedin"></i> <span>Linkedin</span></a>
-					<a href="mailto:contact@fabiom.fr" ref="noopener" class="row"><i class="far fa-at"></i> <span>E-Mail</span></a>
+				<div class="content" v-if="data.socials">
+					<a v-for="d in data.socials" :key="d.name" target="_blank" :href="d.link" ref="noopener" class="row"><i :class="d.icon"></i> <span>{{ d.name }}</span></a>
 				</div>
 			</div>
 		</div>
@@ -25,7 +23,44 @@
 					<br><br>
 					For all my projects and missions, I invest myself to have a stable, optimized and scalable project. I know how to work as a team.				</p>
 			</div>
-
+			<div class="categories">
+				<section class="project">
+					<div class="name">Project</div>
+					<div class="list" v-if="data.projects">
+						<div class="item" v-for="p in data.projects" :key="p.title">
+							<a target="_blank" :href="p.link" class="head">
+								<img :src="require('~/assets/img/projects/'+p.image)" :alt="'project icon ' + p.title">
+								<div class="name">{{ p.title }}</div>
+							</a>
+							<div class="tags">
+								<div v-for="tag in p.tags" :key="p.title+tag">{{ tag }}</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="skills">
+					<div class="name">Skills</div>
+					<div class="sub-cat" v-for="(skills, name) in data.skills">
+						<div class="name">{{ name }}</div>
+						<div class="list">
+							<div class="item" v-for="skill in skills" :key="skill">
+								<Tooltips :content="skill">
+									<img :src="require('~/assets/img/skills/'+skill+'.png')" :alt="'fabiom skill '+skill">
+								</Tooltips>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="hobbies">
+					<div class="name">Hobbies</div>
+					<div class="list">
+						<div class="item" v-for="hobbie in data.hobbies">
+							<i :class="hobbie.icon"></i>
+							{{ hobbie.name }}
+						</div>
+					</div>
+				</section>
+			</div>
 		</div>
 	</div>
 </template>
@@ -38,16 +73,19 @@
 import { NuxtOptionsHead } from '@nuxt/types/config/head'
 import { Component, Vue } from 'nuxt-property-decorator'
 import HeadUtils from "~/utils/HeadUtils"
-import Button from "~/components/forms/button/Button.vue"
-import Title from "~/components/utils/title/title.vue"
-import Alert from "~/components/errors/alert/Alert.vue"
+import { socials } from "~/data/socials"
+import { projects } from "~/data/projects"
+import { skills } from "~/data/skills"
+import Tooltips from "~/components/utils/tooltips/tooltips.vue"
+import { hobbies } from "~/data/hobbies"
 
 @Component({
-	components: { Alert, Button, Title },
+	components: { Tooltips },
 })
 export default class Home extends Vue {
 
 	headConfig: NuxtOptionsHead = {}
+	data = {}
 
 	async asyncData() {
 
@@ -55,7 +93,14 @@ export default class Home extends Vue {
 			title: "Home"
 		})
 
-		return {headConfig}
+		const data = {
+			socials: socials,
+			projects: projects,
+			skills: skills,
+			hobbies: hobbies
+		}
+
+		return {headConfig, data}
 
 	}
 

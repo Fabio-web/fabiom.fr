@@ -4,7 +4,9 @@
 
     .tooltips-content {
         position: absolute;
-        background-color: $color-primary;
+        background-color: $color-black;
+		color: $color-text-white;
+		font-weight: $weight-bold;
         padding: 15px 25px;
         border-radius: 3px;
         z-index: -1;
@@ -22,7 +24,7 @@
             content: "";
             width: 15px;
             height: 15px;
-            background-color: $color-primary;
+            background-color: $color-black;
             position: absolute;
             transform: translateY(-22px) translateX(-50%) rotate(45deg);
             left: 50%;

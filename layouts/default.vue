@@ -1,20 +1,14 @@
 <template>
 	<div>
-		<Toast bottom/>
 		<Nuxt id="content"/>
 	</div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator"
-import Toast from "~/components/errors/toast/Toast.vue"
 
 @Component({
-	components: { Toast },
+	components: { },
 })
-export default class Default extends Vue {
-
-
-
-}
+export default class Default extends Vue {}
 </script>

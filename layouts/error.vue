@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "nuxt-property-decorator"
-import Button from "~/components/forms/button/Button.vue"
+import Button from "~/components/forms/button/button.vue"
 
 @Component({
 	components: { Button },

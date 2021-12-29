@@ -16,7 +16,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     min-width: 100vw;
-    background: $color-smoke;
+    background: $color-white;
     font-size: 15px;
 }
 
@@ -32,7 +32,7 @@ body {
 
 ::-webkit-scrollbar-thumb,
 .message-box-scroll::-webkit-scrollbar-thumb {
-    background-color: $color-primary;
+    background-color: $color-black;
     outline: 0;
 }
 
@@ -45,12 +45,8 @@ body {
 }
 
 a {
-    color: $color-primary;
+    color: $color-white;
     cursor: pointer;
-
-	&:hover {
-		text-decoration: underline;
-	}
 }
 
 a,
