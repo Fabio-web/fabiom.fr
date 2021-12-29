@@ -24,7 +24,7 @@
 					For all my projects and missions, I invest myself to have a stable, optimized and scalable project. I know how to work as a team.				</p>
 			</div>
 			<div class="categories">
-				<section class="project">
+				<section class="project" id="projects">
 					<div class="name">Project</div>
 					<div class="list" v-if="data.projects">
 						<div class="item" v-for="p in data.projects" :key="p.title">
@@ -38,7 +38,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="skills">
+				<section class="skills" id="skills">
 					<div class="name">Skills</div>
 					<div class="sub-cat" v-for="(skills, name) in data.skills">
 						<div class="name">{{ name }}</div>
@@ -51,7 +51,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="hobbies">
+				<section class="hobbies" id="hobbies">
 					<div class="name">Hobbies</div>
 					<div class="list">
 						<div class="item" v-for="hobbie in data.hobbies">
@@ -89,10 +89,6 @@ export default class Home extends Vue {
 
 	async asyncData() {
 
-		const headConfig = HeadUtils.setHead({
-			title: "Home"
-		})
-
 		const data = {
 			socials: socials,
 			projects: projects,
@@ -100,12 +96,8 @@ export default class Home extends Vue {
 			hobbies: hobbies
 		}
 
-		return {headConfig, data}
+		return {data}
 
-	}
-
-	head() {
-		return this.headConfig
 	}
 }
 </script>

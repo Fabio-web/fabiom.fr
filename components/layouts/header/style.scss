@@ -1,0 +1,26 @@
+header {
+	height: 100px;
+	position: fixed;
+	width: 100%;
+
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 100%;
+		gap: 50px;
+		padding-right: 100px;
+
+		backdrop-filter: blur(3px);
+
+		li {
+			a {
+				color: $color-text-black;
+				font: {
+					size: $rem-18;
+					weight: $weight-bold;
+				};
+			}
+		}
+	}
+}

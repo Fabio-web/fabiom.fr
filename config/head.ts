@@ -2,7 +2,7 @@ import { NuxtOptionsHead } from "@nuxt/types/config/head"
 
 const head: NuxtOptionsHead = {
 	title: process.env.APP_NAME,
-	titleTemplate: "%s - " + process.env.APP_NAME,
+	titleTemplate: process.env.APP_NAME,
     htmlAttrs: {
         lang: "fr"
     },
