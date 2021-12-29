@@ -2,6 +2,7 @@ header {
 	height: 100px;
 	position: fixed;
 	width: 100%;
+	z-index: 1;
 
 	ul {
 		display: flex;
@@ -10,6 +11,11 @@ header {
 		height: 100%;
 		gap: 50px;
 		padding-right: 100px;
+
+		@media all and (max-width: $container-mobile-max) {
+			padding-right: 50px;
+			gap: 25px;
+		}
 
 		backdrop-filter: blur(3px);
 

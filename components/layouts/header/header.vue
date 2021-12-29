@@ -8,7 +8,7 @@
 				<a href="#" v-scroll-to="{ el:'#skills' }">Skills</a>
 			</li>
 			<li>
-				<a href="#" v-scroll-to="{ el:'#hobbies' }">hobbies</a>
+				<a href="#" v-scroll-to="{ el:'#hobbies' }">Hobbies</a>
 			</li>
 		</ul>
 	</header>
