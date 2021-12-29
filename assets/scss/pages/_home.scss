@@ -275,6 +275,7 @@
 				.list {
 					display: flex;
 					gap: 15px;
+					flex-wrap: wrap;
 
 					.item {
 						padding: 5px 15px;
