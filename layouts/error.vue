@@ -2,10 +2,10 @@
     <div class="container m-top">
         <div class="error_page">
             <div class="content">
-                <h1 v-if="error.statusCode === 404 || /\/404/.test($route.path)">Oops, on dirait que tu t’es égaré...</h1>
-                <h1 v-else-if="error.statusCode === 401 || /\/401/.test($route.path)">On dirait que tu viens de te faire refuser l'accès ...</h1>
-                <h1 v-else>Une erreur est survenue</h1>
-                <a @click="back()"><Button type="button">Retourner en arrière</Button></a>
+                <h1 v-if="error.statusCode === 404 || /\/404/.test($route.path)">Oops, looks like you got lost...</h1>
+                <h1 v-else-if="error.statusCode === 401 || /\/401/.test($route.path)">Looks like you just got denied access ...</h1>
+                <h1 v-else>An error has occurred</h1>
+                <a @click="back()"><Button type="button">Go back</Button></a>
             </div>
         </div>
     </div>
