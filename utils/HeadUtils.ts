@@ -4,8 +4,8 @@ class HeadUtils {
 
     setHead(head: { title: string, description?: string, image?: string }): NuxtOptionsHead {
 
-        const default_description = ""
-        const default_image = ""
+        const default_description = "Hi, I’m Fabio 👋\nBased in Toulouse, France\ni’m web & application developer"
+        const default_image = "/card.png"
 
         return {
             title: head.title,
