@@ -1,13 +1,13 @@
 import { NuxtOptionsHead } from "@nuxt/types/config/head"
 
-const default_description = "Hi, I’m Fabio 👋\nBased in Toulouse, France\ni’m web & application developer"
+const default_description = "Hi, I’m Fabio Maccotta 👋 Based in Toulouse, France and i’m web & application developer"
 const default_image = "/card.png"
 
 const head: NuxtOptionsHead = {
 	title: process.env.APP_NAME,
 	titleTemplate: process.env.APP_NAME,
 	htmlAttrs: {
-		lang: "fr",
+		lang: "en",
 	},
 	meta: [
 		{ charset: "utf-8" },
@@ -17,27 +17,11 @@ const head: NuxtOptionsHead = {
 		{ hid: "og:site_name", name: "og:site_name", content: process.env.APP_NAME || "default" },
 		{ hid: "og:type", name: "og:type", content: "website" },
 		{ hid: "og:title", name: "og:title", content: process.env.APP_NAME || "default" },
-		{
-			hid: "description",
-			name: "description",
-			content: default_description,
-		},
-		{
-			hid: "og:description",
-			name: "og:description",
-			content: default_description,
-		},
+		{ hid: "description", name: "description", content: default_description, },
+		{ hid: "og:description", name: "og:description", content: default_description, },
 
-		{
-			hid: "og:image",
-			name: "og:image",
-			content: default_image,
-		},
-		{
-			hid: "twitter:image",
-			name: "twitter:image",
-			content: default_image,
-		},
+		{ hid: "og:image", name: "og:image", content: default_image, },
+		{ hid: "twitter:image", name: "twitter:image", content: default_image, },
 
 		{ hid: "twitter:card", name: "twitter:card", content: "summary_large_image" },
 

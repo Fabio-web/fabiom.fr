@@ -26,26 +26,3 @@
     margin-top: $margin-top;
     min-height: calc(100vh - 450px);
 }
-
-.clear {
-    clear: both;
-}
-
-.mask {
-    visibility: hidden;
-}
-
-.display {
-    display: none;
-}
-
-hr {
-    border: 1px solid rgba($color-smoke, 0.15);
-    border-bottom: 0;
-    margin: 0 auto;
-    width: 70%;
-
-    &.hr-space {
-        margin: 25px auto;
-    }
-}

@@ -8,7 +8,7 @@
 			</div>
 			<div class="side socials">
 				<div class="content" v-if="data.socials">
-					<a v-for="d in data.socials" :key="d.name" target="_blank" :href="d.link" ref="noopener" class="row"><i :class="d.icon"></i> <span>{{ d.name }}</span></a>
+					<a rel="noopener" v-for="d in data.socials" :key="d.name" target="_blank" :href="d.link" class="row"><i :class="d.icon"></i> <span>{{ d.name }}</span></a>
 				</div>
 			</div>
 		</div>
@@ -28,7 +28,7 @@
 					<div class="name">Project</div>
 					<div class="list" v-if="data.projects">
 						<div class="item" v-for="p in data.projects" :key="p.title">
-							<a target="_blank" :href="p.link" class="head">
+							<a target="_blank" :href="p.link" class="head" rel="noopener">
 								<img :src="require('~/assets/img/projects/'+p.image)" :alt="'project icon ' + p.title">
 								<div class="name">{{ p.title }}</div>
 							</a>
@@ -72,7 +72,6 @@
 <script lang="ts">
 import { NuxtOptionsHead } from '@nuxt/types/config/head'
 import { Component, Vue } from 'nuxt-property-decorator'
-import HeadUtils from "~/utils/HeadUtils"
 import { socials } from "~/data/socials"
 import { projects } from "~/data/projects"
 import { skills } from "~/data/skills"

@@ -21,7 +21,7 @@ const projects = [
 		title: "Creation of my website",
 		image: "nuxtjs.png",
 		tags: ["NodeJS", "NuxtJS"],
-		link: "https://fabiom.fr/"
+		link: "https://github.com/Fabio-web/fabiom.fr"
 	},
 ]
 
