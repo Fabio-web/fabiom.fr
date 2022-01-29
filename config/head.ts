@@ -7,7 +7,7 @@ const head: NuxtOptionsHead = {
 	title: process.env.APP_NAME,
 	titleTemplate: process.env.APP_NAME,
 	htmlAttrs: {
-		lang: "en",
+		lang: "fr",
 	},
 	meta: [
 		{ charset: "utf-8" },

@@ -54,10 +54,10 @@
 				<section class="hobbies" id="hobbies">
 					<div class="name">Hobbies</div>
 					<div class="list">
-						<div class="item" v-for="hobbie in data.hobbies">
+						<a :href="hobbie.link" target="_blank" rel="noopener" class="item" v-for="hobbie in data.hobbies">
 							<i :class="hobbie.icon"></i>
 							{{ hobbie.name }}
-						</div>
+						</a>
 					</div>
 				</section>
 			</div>

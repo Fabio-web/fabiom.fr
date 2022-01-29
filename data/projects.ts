@@ -14,7 +14,7 @@ const projects = [
 	{
 		title: "Integration of a flutter model",
 		image: "flutter.png",
-		tags: ["Flutter", "Android"],
+		tags: ["Flutter", "Challenge"],
 		link: "https://github.com/Fabio-web/mobile-banking-app"
 	},
 	{
@@ -22,6 +22,12 @@ const projects = [
 		image: "nuxtjs.png",
 		tags: ["NodeJS", "NuxtJS"],
 		link: "https://github.com/Fabio-web/fabiom.fr"
+	},
+	{
+		title: "A internet speed test app",
+		image: "flutter.png",
+		tags: ["Flutter", "Android", "IOS"],
+		link: "https://github.com/NeithyConcept/speed-test-mobile-app"
 	},
 ]
 
